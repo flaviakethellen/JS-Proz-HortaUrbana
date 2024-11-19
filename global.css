@@ -1,21 +1,70 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f5f5;
-  color: #333;
+  background-color: #fff;
+  color: #ccc;
   margin: 0;
   padding: 0;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 10px;
+  height: 32px;
+  background-color: rgb(39, 54, 23);
+  color: #fff;
+}
+.welcome div {
+  display: flex; /* Coloca os ícones na mesma linha */
+  gap: 10px;
+  height: 32px;
 }
 
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(75, 175, 75);
-  color: #f0f5f5;
+  background: url(./assets/images/header/background-header.png) center / cover no-repeat;
+  color: #fff;
   text-align: center;
-  height: 150px;
-  font-size: 40px;
+  height: 250px;
 }
+.header section {
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+  height: 100%;
+}
+.header h1 {
+  margin: 0;
+  height: 100%;
+  font-size: 100px;
+  letter-spacing: 6px;
+  font-family: 'Zen Tokyo Zoo';
+}
+
+.search {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 4px 8px;
+  width: 30%;
+  max-width: 250px;
+  transform: translateY(-30px);
+}
+.search input {
+  border: none;
+  background: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+}
+.search span {
+  cursor: pointer;
+}
+
 
 .container {
   padding: 20px;
@@ -31,23 +80,22 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: center;
-  background-color: rgb(50, 125, 55);
-  padding: 10px 0;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgb(0, 255, 0);
+  justify-content: space-around;
+  background-color: rgb(95, 108, 55);
+  box-shadow: 0 2px 4px rgb(27, 31, 15);
 }
 .navbar a {
   color: #f0f5f5;
-  padding: 10px 20px;
+  padding: 10px 0;
   text-decoration: none;
-  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1.5px;
   font-size: 1.1em;
   border-radius: 10px;
+  width: 150px;
 }
 .navbar a:hover {
-  box-shadow: 0 1px 2px rgb(0, 255, 0);
+  box-shadow: 0 1px 2px rgb(27, 31, 15);
 }
 
 .footer {
