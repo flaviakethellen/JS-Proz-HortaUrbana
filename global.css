@@ -1,7 +1,21 @@
+.light {
+  --bkground1: rgb(40, 55, 25);
+  --bkground2: rgb(100, 110, 55);
+  --bkground-content: rgb(255, 250, 225);
+  --border-color: black;
+  --text-color: #fff;
+  --details1: rgb(190, 110, 40);
+  --details2: rgb(220, 160, 95);
+  --smoke: rgb(75, 175, 80);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff;
-  color: #ccc;
+  background-color: var(--bkground-content);
   margin: 0;
   padding: 0;
 }
@@ -12,13 +26,8 @@ body {
   align-items: center;
   padding: 3px 10px;
   height: 32px;
-  background-color: rgb(39, 54, 23);
-  color: #fff;
-}
-.welcome div {
-  display: flex; /* Coloca os ícones na mesma linha */
-  gap: 10px;
-  height: 32px;
+  background-color: var(--bkground1);
+  color: var(--text-color);
 }
 
 .header {
@@ -33,15 +42,16 @@ body {
 .header section {
   display: flex;
   align-items: end;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 20px;
   height: 100%;
 }
 .header h1 {
-  margin: 0;
-  height: 100%;
   font-size: 100px;
+  line-height: 70px;
+  font-weight: 300;
   letter-spacing: 6px;
-  font-family: 'Zen Tokyo Zoo';
+  font-family: "Zen Tokyo Zoo";
 }
 
 .search {
@@ -52,7 +62,6 @@ body {
   padding: 4px 8px;
   width: 30%;
   max-width: 250px;
-  transform: translateY(-30px);
 }
 .search input {
   border: none;
@@ -65,6 +74,25 @@ body {
   cursor: pointer;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--bkground2);
+  box-shadow: 0 2px 4px var(--bkground1);
+}
+.navbar a {
+  color: var(--text-color);
+  padding: 10px 0;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 1.5px;
+  font-size: 1.1em;
+  border-radius: 10px;
+  width: 150px;
+}
+.navbar a:hover {
+  box-shadow: 0 1px 2px var(--bkground1);
+}
 
 .container {
   padding: 20px;
@@ -75,45 +103,84 @@ body {
 .container h2 {
   text-align: center;
   font-size: 2em;
-  color: #4CAF50;
+  color: var(--smoke);
 }
 
-.navbar {
+footer {
+  background-color: var(--bkground2);
+  color: var(--text-color);
+}
+.footer-content {
   display: flex;
-  justify-content: space-around;
-  background-color: rgb(95, 108, 55);
-  box-shadow: 0 2px 4px rgb(27, 31, 15);
+  justify-content: space-between; 
+  padding: 10px 10px;
+  background-color: var(--bkground2);
 }
-.navbar a {
-  color: #f0f5f5;
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  gap: 10px;
+}
+.footer-section h3{
+  font-family: "Zen Tokyo Zoo";
+  font-weight: 100;
+  letter-spacing: 4px;
+}
+.footer-socials {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 10px 0;
+  gap: 20px;
+}
+.footer-socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  border: solid 1px var(--text-color);
+  border-radius: 4px;
+  padding: 10px;
+}
+.footer-socials a[uk-icon="instagram"]:hover {
+  background: linear-gradient(130deg,#515BD4,#8134AF,#DD2A7B,#FEDA77,#F58529);  
+}
+.footer-socials a[uk-icon="facebook"]:hover {
+  background-color: rgb(60, 90, 152);
+}
+.footer-socials a[uk-icon="linkedin"]:hover {
+  background-color: rgb(15, 120, 170);
+}
+.footer-socials a[uk-icon="whatsapp"]:hover {
+  background-color: rgb(65, 195, 80);
+}
+.footer-socials a[uk-icon="x"]:hover {
+  background-color: rgb(255, 255, 255);
+}
+.footer-socials a[uk-icon="tiktok"]:hover {
+  background-color: rgb(255, 255, 255);
+}
+.footer-right {
+  display: flex;
+  justify-content: center;
   padding: 10px 0;
-  text-decoration: none;
-  text-align: center;
-  letter-spacing: 1.5px;
-  font-size: 1.1em;
-  border-radius: 10px;
-  width: 150px;
-}
-.navbar a:hover {
-  box-shadow: 0 1px 2px rgb(27, 31, 15);
+  background-color: var(--bkground1);
+  font-size: 14px;
+  gap: 10px;
 }
 
-.footer {
-  background-color: rgb(50, 125, 55);
-  color: #f0f5f5;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
-  min-height: calc(100vh-400px);
+.link-acess {
+  color: var(--text-color);
+  text-decoration: none;
 }
-.footer p {
-  margin: 0;
-  font-size: 0.9em;
+.link-acess:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
   .navbar a {
     padding: 10px;
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
